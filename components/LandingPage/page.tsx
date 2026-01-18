@@ -76,13 +76,13 @@ export const LandingPage = () => {
           </p>
           
           {/* Email Signup */}
-          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto mb-8">
+          <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto mb-8">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg outline-none"
+              className="w-[16rem] md:w-[20rem] flex-1 px-4 py-3 border border-gray-300 rounded-lg outline-none bg-gray-100"
               required
             />
             <button
@@ -227,7 +227,7 @@ export const LandingPage = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-100 text-black pt-16 md:px-6 relative overflow-hidden">
+      <footer className="bg-green-50 backdrop-blur-2xl text-black pt-16 md:px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10 mb-20">
           <div className="flex justify-between gap-0 md:gap-8">
             {/* Brand Section - Left */}
@@ -266,7 +266,7 @@ export const LandingPage = () => {
         </div>
         
         {/* Large Background Text */}
-        <div className="text-center -mb-2 md:-mb-6 text-gray-900 font-bold text-5xl md:text-9xl opacity-20">
+        <div className="text-center -mb-2 md:-mb-6 text-green-600 font-bold text-5xl md:text-9xl opacity-40">
           ChikitsaSetu
         </div>
         
