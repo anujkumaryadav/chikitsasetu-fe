@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react'
 import { FaLinkedinIn, FaFacebook } from "react-icons/fa";
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
+import { RiTelegram2Fill } from "react-icons/ri";
 
 export const LandingPage = () => {
   const [email, setEmail] = useState('')
@@ -24,7 +25,7 @@ export const LandingPage = () => {
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                   </svg>
                 </div>
-            <span className="text-2xl font-semibold text-gray-900">ChikitsaSetu</span>
+            <span className="text-xl md:text-2xl font-semibold text-gray-900">ChikitsaSetu</span>
           </div>
           
           <nav className="hidden md:flex items-center space-x-8">
@@ -36,7 +37,7 @@ export const LandingPage = () => {
           </nav>
           
           <div className="flex items-center space-x-4">
-            <div className="relative">
+            <div className="relative hidden md:block">
               <select className="text-gray-600 text-sm bg-transparent border-none outline-none cursor-pointer pr-6 appearance-none">
                 <option>English</option>
                 <option>Hindi</option>
@@ -58,13 +59,13 @@ export const LandingPage = () => {
 
       {/* Hero Section */}
       <main className="px-6 py-16 max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Your Trusted
-            <span className="bg-green-600 bg-clip-text text-transparent"> Healthcare</span>
+        <div className="text-center mb-16 flex flex-col justify-center items-center">
+          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+            Your Trusted <br className='md:hidden'/>
+            <span className="bg-green-600 bg-clip-text text-transparent">AI Healthcare</span>
             <br />Companion
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
             Get instant medical guidance, book appointments with qualified doctors, and access personalized healthcare solutions powered by AI.
           </p>
           
@@ -75,7 +76,7 @@ export const LandingPage = () => {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="flex-1 px-4 py-3 border border-gray-300 rounded-lg outline-none"
               required
             />
             <button
@@ -165,9 +166,7 @@ export const LandingPage = () => {
                   disabled
                 />
                 <button className="bg-blue-600 text-white p-2 rounded-lg hover:bg-blue-700 transition-colors">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                  </svg>
+                  <RiTelegram2Fill />
                 </button>
               </div>
             </div>
@@ -222,20 +221,20 @@ export const LandingPage = () => {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-100 text-black pt-16 px-6 relative overflow-hidden">
+      <footer className="bg-gray-100 text-black pt-16 md:px-6 relative overflow-hidden">
         <div className="max-w-7xl mx-auto relative z-10 mb-20">
-          <div className="flex justify-between gap-8">
+          <div className="flex justify-between gap-0 md:gap-8">
             {/* Brand Section - Left */}
-            <div className="md:col-span-1 px-6">
+            <div className="px-6 flex flex-col items-center w-full">
               <div className="flex items-center space-x-3 mb-6">
                 <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
                   <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
                   </svg>
                 </div>
-                <span className="text-2xl font-semibold">ChikitsaSetu</span>
+                <span className="text-xl md:text-2xl font-semibold">ChikitsaSetu</span>
               </div>
-              <p className="text-gray-600 text-sm leading-relaxed mb-8 max-w-xs">
+              <p className="text-gray-600 text-center text-sm leading-relaxed mb-8 max-w-xs">
                 ChikitsaSetu is your AI-powered healthcare companion, connecting your health needs to expert medical guidance in a snap.
               </p>
               
@@ -255,32 +254,13 @@ export const LandingPage = () => {
               </div>
             </div>
             
-            <div className='flex space-x-20 px-6'>
-                 <div>
-              <h4 className="font-semibold mb-4 text-gray-600">Company</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact Us</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Pricing</a></li>
-              </ul>
-            </div>
-            
-            {/* Resources Column */}
-            <div>
-              <h4 className="font-semibold mb-4 text-gray-600">Legal</h4>
-              <ul className="space-y-3 text-gray-400 text-sm">
-                <li><a href="#" className="hover:text-white transition-colors">Documentation</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms and condition</a></li>
-              </ul>
-            </div>
-            </div>
+        
            
           </div>
         </div>
         
         {/* Large Background Text */}
-        <div className=" text-center -mb-6 text-gray-900 font-bold text-8xl md:text-9xl opacity-20">
+        <div className="text-center -mb-2 md:-mb-6 text-gray-900 font-bold text-5xl md:text-9xl opacity-20">
           ChikitsaSetu
         </div>
         
