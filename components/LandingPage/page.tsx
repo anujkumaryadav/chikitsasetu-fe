@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react'
 import { FaLinkedinIn, FaFacebook } from "react-icons/fa";
+import { toast } from 'sonner'
 import { FaXTwitter, FaWhatsapp } from "react-icons/fa6";
 import { RiTelegram2Fill } from "react-icons/ri";
 
@@ -11,7 +12,10 @@ export const LandingPage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Email submitted:', email)
+    if (email) {
+      toast.success('Thank you for subscribing!')
+      setEmail('') 
+    }
   }
 
   return (
