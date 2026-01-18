@@ -1,17 +1,10 @@
-import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Features from './components/Features';
-import ContactUs from './components/ContactUs';
-import Footer from './components/Footer';
+import { LandingPage } from "@/components/LandingPage/page";
+import React from "react";
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <Hero />
-      <Features />
-      <ContactUs />
-      <Footer />
+      <LandingPage/>
     </div>
   );
 }
