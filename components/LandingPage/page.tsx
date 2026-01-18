@@ -17,7 +17,7 @@ export const LandingPage = () => {
   return (
     <div className="min-h-screen bg-linear-to-br from-blue-50 via-white to-green-50">
       {/* Header */}
-      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b border-gray-200 bg-white/80 backdrop-blur-md shadow-gray-200 shadow-sm sticky top-3 md:top-5 z-50 mx-3 md:mx-4 rounded-full ">
         <div className="px-6 py-4 flex justify-between items-center max-w-7xl mx-auto">
           <div className="flex items-center space-x-2">
              <div className="w-8 h-8 bg-green-500 rounded-lg flex items-center justify-center">
@@ -31,9 +31,8 @@ export const LandingPage = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <a href="#integrations" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Integrations</a>
             <a href="#services" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Services</a>
-            <a href="#careers" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Careers</a>
-            <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">About</a>
-            <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Contact</a>
+            <a href="#about" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">About Us</a>
+            <a href="#contact" className="text-gray-600 hover:text-gray-900 transition-colors text-sm">Contact Us</a>
           </nav>
           
           <div className="flex items-center space-x-4">
@@ -58,8 +57,15 @@ export const LandingPage = () => {
       </header>
 
       {/* Hero Section */}
-      <main className="px-6 py-16 max-w-7xl mx-auto">
-        <div className="text-center mb-16 flex flex-col justify-center items-center">
+      <main className="px-6 py-16 max-w-7xl mx-auto relative">
+        {/* Background blur effects */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-20 left-1/4 w-96 h-96 bg-green-600/20 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 right-1/3 w-80 h-80 bg-green-600/15 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 left-1/2 w-72 h-72 bg-green-600/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="text-center mb-16 flex flex-col justify-center items-center relative z-10">
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             Your Trusted <br className='md:hidden'/>
             <span className="bg-green-600 bg-clip-text text-transparent">AI Healthcare</span>
@@ -91,7 +97,7 @@ export const LandingPage = () => {
         </div>
 
         {/* Chat Demo Section */}
-        <div className="max-w-4xl mx-auto mb-20">
+        <div className="max-w-4xl mx-auto mb-20 relative z-10">
           <div className="bg-white rounded-2xl shadow-xl border border-gray-200 overflow-hidden">
             <div className="bg-gray-50 px-6 py-4 border-b border-gray-200">
               <div className="flex items-center space-x-3">
@@ -174,7 +180,7 @@ export const LandingPage = () => {
         </div>
 
         {/* Features Section */}
-        <section id="features" className="mb-20">
+        <section id="features" className="mb-20 relative z-10">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Why Choose ChikitsaSetu?
           </h2>
@@ -211,7 +217,7 @@ export const LandingPage = () => {
           </div>
         </section>
 
-        <section className="text-center bg-gray-700 rounded-2xl p-12 text-white">
+        <section className="text-center bg-gray-700 rounded-2xl p-12 text-white relative z-10">
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Healthcare Experience?</h2>
           <p className="text-xl mb-8 opacity-90">Join thousands of users who trust ChikitsaSetu for their healthcare needs.</p>
           <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
